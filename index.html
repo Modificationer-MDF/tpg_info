@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="GBK">
+    <title>关于</title>
+    <style>
+        /* 这个网页的 CSS 代码写了好多 /(ㄒoㄒ)/~~ */
+        body {
+            background-color: #151414;
+        }
+
+        button {
+            color: white;
+            font-weight: 225;
+            font-size: 30px;
+            font-family: "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
+        }
+
+        a {
+            color: white;
+            font-weight: 225;
+            font-size: 30px;
+            font-family: "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
+        }
+
+            a:link {
+                color: cyan;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: mediumpurple;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: silver;
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: palegreen;
+                text-decoration: underline;
+            }
+
+        p {
+            color: white;
+            font-weight: 225;
+            font-size: 30px;
+            font-family: "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
+        }
+
+            p.color1 {
+                color: gold;
+            }
+
+            p.end {
+                color: peachpuff;
+                font-size: 20px;
+            }
+
+        div {
+            color: white;
+            font-weight: 225;
+            font-size: 30px;
+            font-family: "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
+        }
+
+            div.side1 {
+                background-color: #1dbec852;
+                padding: 14px;
+                border-left: 6px solid cyan;
+                border-right: 6px solid cyan;
+                border-color: cyan;
+                margin-bottom: 14px;
+            }
+
+            div.side2 {
+                background-color: #132d5254;
+                padding: 14px;
+                border-left: 6px solid #0092ff;
+                border-right: 6px solid #0092ff;
+                border-color: #0092ff;
+                margin-bottom: 14px;
+            }
+
+            div.side3 {
+                background-color: #55000065;
+                padding: 14px;
+                border-left: 6px solid darkred;
+                border-right: 6px solid darkred;
+                border-color: darkred;
+                margin-bottom: 14px;
+            }
+
+        ul.a {
+            list-style-type: circle;
+        }
+
+        ul.b {
+            list-style-type: square;
+        }
+
+        #check1 {
+            background-color: #279598ad;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 14px;
+            font-weight: 225;
+        }
+
+        #check2 {
+            background-color: #012a8ba4;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 14px;
+            font-weight: 225;
+        }
+        
+        #check3 {
+            background-color: #dc536284;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 14px;
+            font-weight: 225;
+        }
+
+        #area1 {
+            background-color: #2a002138;
+            padding: 10px;
+            border-radius: 7px;
+            margin-bottom: 25px;
+        }
+
+        #area2 {
+            background-color:#3c37003e;
+            padding: 10px;
+            border-radius: 7px;
+            margin-bottom: 25px;
+        }
+
+        #area3 {
+            background-color: #001b0550;
+            padding: 10px;
+            border-radius: 7px;
+            margin-bottom: 25px;
+        }
+        /*#feedback {
+            width: 100px;
+            border: 5px solid #55b155a4;
+            padding: 100px;
+            background-color: #022c1e63;
+            border-radius: 14px;
+        }
+
+        #que {
+            height: 0;
+            overflow: hidden;
+        }
+
+        #que.open {
+                animation: open 0.5s forwards;
+            }
+
+        #que.close {
+                animation: close 0.3s forwards;
+            }
+
+        #ans {
+            height: 41px;
+            line-height: 41px;
+        }
+
+        @keyframes close1 {
+            from {
+                height: 40px;
+            }
+
+            to {
+                height: 0px;
+            }
+        }*/
+        #check4 {
+            background-color: #1c0e3859;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 14px;
+            font-weight: 225;
+        }
+    </style>
+    <script>
+        window.alert("你好，欢迎来到 The Play Games 的信息界面");
+        window.alert("请注意！该网站处于测试状态")
+        // 打开网页时的警告框
+        console.log("如果你发现了这条信息，代表该网站已测试完毕！ O(∩_∩)O");
+        // 将该信息发送至控制台（你可以按 “F12” 键或右键再选择 “审查网页元素 / 检查” 找到控制台便可查看）
+    </script>
+</head>
+<body>
+    <!-- <script>
+            var btn = document.getElementById('btn');
+            var que = document.getElementById('que');
+            btn.addEventListener('click', function () {
+                que.className = (que.className === 'open' ? 'close' : 'open');
+            })
+    </script> -->
+    <script>
+        var urls = [
+            "https://cn.bing.com/search?q=%E5%85%B6%E5%AE%9E%E4%BD%A0%E8%AF%B4%E7%9A%84%E6%98%AF%E5%AF%B9%E7%9A%84&form=ANNTH1&refig=661b3cc06ff44b4f9ff62827693d8c72&pc=U531&adppc=EDGEDBB",
+            "https://cn.bing.com/search?pglt=169&q=%E4%BD%A0%E6%9C%89%E5%8F%AF%E8%83%BD%E8%AF%B4%E5%AF%B9%E4%BA%86&cvid=107dea9abbc3464c949381d03348ea54&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQg1ODUyajBqMagCALACAA&FORM=ANNTA1&adppc=EDGEDBB&PC=EDGEDBB",
+            "https://cn.bing.com/search?q=%E5%85%B6%E5%AE%9E%E4%BD%A0%E9%80%89%E9%94%99%E4%BA%86&form=ANNTH1&refig=661b3d64b74b484499e16594b7bbfadb&pc=U531&adppc=EDGEDBB",
+        ];
+        var randomorder = Math.floor(Math.random() * urls.length);
+        var randomurl = urls[randomorder];
+        function input() {
+            var a;
+            var b = prompt("请输入你需要的帮助：", "输入 “信息” 或者 “位置”");
+            if (b == "信息") {
+                a = "疑难解答是排除 The Play Games 问题的文件";
+                alert(a);
+            }
+            if (b == "位置") {
+                a = "TPG Version 0.7 / 特殊文件 / 疑难解答.BAT";
+                alert(a);
+            }
+            if (b == "输入 “信息” 或者 “位置”") {
+                var c = prompt("你到底需要什么帮助？请重新输入（输入 “信息” 或者 “位置”）");
+                if (c == "信息") {
+                    alert("疑难解答是排除 The Play Games 问题的文件");
+                }
+                if (c == "位置") {
+                    alert("TPG Version 0.7 / 特殊文件 / 疑难解答.BAT");
+                }
+                if (c != "信息" && c != "位置") {
+                    alert("未能识别你的命令。请关闭该窗口并重新输入");
+                }
+            }
+            else {
+                var c1 = prompt("我不明白你的意思，请重新输入（输入 “信息” 或者 “位置”）");
+                if (c1 == "信息") {
+                    alert("疑难解答是排除 The Play Games 问题的文件");
+                }
+                if (c1 == "位置") {
+                    alert("TPG Version 0.7 / 特殊文件 / 疑难解答.BAT");
+                }
+                if (c1 != "信息" && c1 != "位置") {
+                    alert("未能识别你的命令。请关闭该窗口并重新输入");
+                }
+            }
+        }
+        function whats() {
+            alert("请注意！ The Play Games 中所有的文件由各种编程语言组成 \n （包括但不限于： .bat, .vbs, .html ）");
+            var d = confirm("你是否需要查看这些语言的中文文档？");
+            if (d == true) {
+                var e = prompt("你需要查看哪一种语言？\n 1 - bat \n 2 - html \n 3 - f");
+                if (e == "bat" || e == "Bat" || e == "BAt" || e == "BAT" || e == "bAt" || e == "baT" || e == "BAT" || e == "bAT" || e == "BaT" || e == "1") {
+                    var f = confirm("Windows Server: https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands \n 你是否要跳转到该网址？");
+                    if (f == true) {
+                        window.open("https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands");
+                        alert("已在新窗口内打开该网址 \n / 如果浏览器阻止弹出窗口，请在设置中允许该网站弹出 /");
+                    }
+                    if (f == false) {
+                        var g = confirm("你是否需要粘贴该网址文本至剪贴板？");
+                        if (g == true) {
+                            prompt("请复制以下文本", "https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands");
+                        }
+                        if (g == false) {
+                            alert("如果需要帮助，请再次按下该按钮");
+                        }
+                    }
+                }
+                if (e == "html" || e == "HTML" || e == "Html" || e == "HtmL" || e == "HtMl" || e == "HTml" || e == "HTMl" || e == "hTml" || e == "hTMl" || e == "hTML" || e == "htMl" || e == "htML" || e == "htmL" || e == "2") {
+                    var h = confirm("Mozilla: https://developer.mozilla.org/zh-CN/docs/Web/HTML \n 你是否要跳转到该网址？");
+                    if (h == true) {
+                        window.open("https://developer.mozilla.org/zh-CN/docs/Web/HTML")
+                        alert("已在新窗口内打开该网址 \n / 如果浏览器阻止弹出窗口，请在设置中允许该网站弹出 /")
+                    }
+                    if (h == false) {
+                        var g = confirm("你是否需要粘贴该网址文本至剪贴板？");
+                        if (g == true) {
+                            prompt("请复制以下文本", "https://developer.mozilla.org/zh-CN/docs/Web/HTML");
+                        }
+                        if (g == false) {
+                            alert("如果需要帮助，请再次按下该按钮");
+                        }
+                    }
+                }
+                if (e == "f" || e == "F" || e == "3") {
+                    var i = confirm("跳转网址？");
+                    if (i == true) {
+                        alert("……");
+                        alert("…………");
+                        alert("……………… \n ……");
+                        alert("………… \n …………");
+                        alert("………… \n ………… \n ……");
+                        alert("………… \n ………… \n …………");
+                        alert("…………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………");
+                        var j = confirm("没有反应");
+                        if (j == true) {
+                            alert("没有反应！");
+                            alert("没有反应！\n 没有反应！\n 没有反应！\n");
+                            alert("没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！");
+                            location.href = randomurl;
+                        }
+                        if (j == false) {
+                            alert("XD");
+                            alert("[doge]");
+                        }
+                    }
+                    if (i == false) {
+                        alert("! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n !");
+                        location.href = randomurl;
+                    }
+                }
+                else {
+                    alert("未知命令，请重试");
+                }
+            }
+            if (d == false) {
+                var a1 = confirm("你是否想知道有关 TPG 文件的叙述？");
+                if (a1 == true) {
+                    var a2 = prompt("以下是 The Play Games 文件列表，请输入你想知道的内容 \n 1 - 窗口叠叠乐 \n 2 - 隐形的文本文件 \n 3 - 一些无脑文件 \n 4 - 网页 ？？？ \n 5 - 新年特辑 \n 6 - F 语言字符转换器 \n 7 - 个人吐槽 \n 8 - 不想上学！！！");
+                    if (a2 == "1" || a2 == "窗口叠叠乐") {
+                        alert("该文件是为了测试在无 Explorer 运行模式下最小化窗口能叠的个数");
+                        alert("当然，你也可以“作死”在桌面上运行");
+                    }
+                    if (a2 == "2" || a2 == "隐形的文本文件") {
+                        alert("该想法来源于 SYSTEM-RAMOS-ZDY");
+                        alert("这是我自制的批处理文件版本");
+                    }
+                    if (a2 == "3" || a2 == "一些无脑文件") {
+                        alert("请自行尝试，难以言表");
+                    }
+                    if (a2 == "4" || a2 == "网页？？？" || a2 == "网页" || a2 == "网页？" || a2 == "网页？？" || a2 == "网页?" || a2 == "网页??" || a2 == "网页???" || a2 == "网页 ？？？") {
+                        alert("这是 TPG 0.1 版本内置的彩蛋文件，以庆祝 TPG 的诞生 \n （实际上内容与此无关）");
+                    }
+                    if (a2 == "5" || a2 == "新年特辑") {
+                        alert("这是 TPG 0.2 版本内置的彩蛋文件，以庆祝春节。你可以尝试运行 \n （虽然很简陋）");
+                    }
+                    if (a2 == "6" || a2 == "F 语言字符转换器" || a2 == "F语言字符转换器" || a2 == "f 语言字符转换器" || a2 == "f语言字符转换器") {
+                        alert("这对以后的 TPG 很重要");
+                    }
+                    if (a2 == "7" || a2 == "个人吐槽") {
+                        alert("该文件用意在于：吐槽在私信上看到的言论 \n （现在没有私信了）");
+                    }
+                    if (a2 == "8" || a2 == "不想上学！！！" || a2 == "不想上学" || a2 == "不想上学！" || a2 == "不想上学！！" || a2 == "不想上学!" || a2 == "不想上学!!" || a2 == "不想上学!!!" || a2 == "不想上学 ！！！") {
+                        alert("基于现实故事编写，写的很乱，主要用于吐槽寒假时间太短 \n ！该文件可能会卡死电脑！");
+                    }
+                    else {
+                        alert("输入有误，请重试");
+                    }
+                }
+                if (a1 == false) {
+                    alert("如果需要帮助，请再次按下该按钮")
+                }
+            }
+        }
+    </script>
+    <div id="area1">
+        <p style="color: azure; font-size: 45px; text-align: center">主要区域</p>
+        <p class="color1">你是否需要以下帮助？</p>
+        <div class="side1">
+            <p>
+                The Play Games 目前版本
+                <button type="button" id="check1" onclick="alert('Test Version 0.7 ( Stable )')">是</button>
+            </p>
+        </div>
+        <div class="side2">
+            <p>
+                疑难解答
+                <button type="button" id="check2" onclick="input()">帮助</button>
+            </p>
+        </div>
+        <div class="side3">
+            <p>
+                关于 The Play Games
+                <button type="button" id="check3" onclick="whats()">文件</button>
+            </p>
+        </div>
+    </div>
+    <!-- 无序列表 -->
+    <div id="area2">
+        <p style="color: azure; font-size: 45px; text-align: center">页底区域</p>
+        <ul class="a">
+            <li style="color: cyan">
+                <a href="mailto:With_Cout@hotmail.com" target="_blank">发送邮件至 With_Cout@hotmail.com</a>
+            </li>
+        </ul>
+        <ul class="b">
+            <li style="color: peachpuff">
+                <p class="end">网站版本信息： Test 0.2 ( Stable )</p>
+            </li>
+        </ul>
+    </div>
+    <div id="area3">
+        <p style="color: azure; font-size: 45px; text-align: center">调试区域</p>
+        <button type="button" id="check4">关闭该网页</button>
+        <script>
+            document.getElementById('check4').addEventListener('click', function () {
+                var close = confirm("是否关闭该网页？");
+                if (close == true) {
+                    window.close();
+                }
+                if (close == false) {
+                    alert("其实你也不想关闭，对吧？")
+                }
+            });
+            window.addEventListener('beforeunload', function (e) {
+                e.preventDefault();
+                e.returnValue = ' ';
+            });
+        </script>
+    </div>
+    <p style="color: azure; font-size: 20px; text-align: center">! Made by Feng_Noti & With_Cout !</p>
+    <p style="color: azure; font-size: 20px; text-align: center">! The Play Games Information ( Website Version )</p>
+</body>
+</html>
