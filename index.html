@@ -8,7 +8,7 @@
         body {
             background-color: #151414;
         }
-
+        
         button {
             color: white;
             font-weight: 225;
@@ -93,12 +93,17 @@
                 margin-bottom: 14px;
             }
 
+            div.side4 {
+                background-color: #3e230685;
+                padding: 14px;
+                border-left: 6px solid darkorange;
+                border-right: 6px solid darkorange;
+                border-color: darkorange;
+                margin-bottom: 14px;
+            }
+
         ul.a {
             list-style-type: circle;
-        }
-
-        ul.b {
-            list-style-type: square;
         }
 
         #check1 {
@@ -211,22 +216,68 @@
             border-radius: 14px;
             font-weight: 225;
         }
+
+        .check6 {
+            background-color: #3e182093;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 14px;
+            font-weight: 225;
+        }
+
+        #check7 {
+            background-color: #a0833f89;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 14px;
+            font-weight: 225;
+        }
+
+        .button-contain {
+            position: relative;
+        }
+
+        .ball {
+            width: 45px;
+            height: 45px;
+            background-color: #ffffff98;
+            border-radius: 50%;
+            position: absolute;
+            transition: transform 0.5s ease;
+        }
+
+        .ball.right {
+            transform: translateX(500px);
+        }
     </style>
     <script>
-        window.alert("请注意！该网站处于测试状态");
+        window.alert("你好，欢迎来到 The Play Games 的信息界面");
+        window.alert("请注意！该网站处于测试状态")
         // 打开网页时的警告框
         console.log("如果你发现了这条信息，代表该网站已测试完毕！ O(∩_∩)O");
         // 将该信息发送至控制台（你可以按 “F12” 键或右键再选择 “审查网页元素 / 检查” 找到控制台便可查看）
     </script>
 </head>
 <body>
-    <!-- <script>
-            var btn = document.getElementById('btn');
-            var que = document.getElementById('que');
-            btn.addEventListener('click', function () {
-                que.className = (que.className === 'open' ? 'close' : 'open');
-            })
-    </script> -->
+    <script>
+        /* var btn = document.getElementById('btn');
+        var que = document.getElementById('que');
+        btn.addEventListener('click', function () {
+            que.className = (que.className === 'open' ? 'close' : 'open');
+        }) */
+    </script>
     <script>
         var urls = [
             "https://cn.bing.com/search?q=%E5%85%B6%E5%AE%9E%E4%BD%A0%E8%AF%B4%E7%9A%84%E6%98%AF%E5%AF%B9%E7%9A%84&form=ANNTH1&refig=661b3cc06ff44b4f9ff62827693d8c72&pc=U531&adppc=EDGEDBB",
@@ -381,6 +432,48 @@
             }
         }
     </script>
+    <script>
+        function rollball() {
+            const ball = document.querySelector('.ball');
+            const message = document.getElementById('msg');
+            if (!ball.classList.contains('right')) {
+                ball.classList.add('right');
+                message.style.display = 'block';
+                setTimeout(function () {
+                    alert("Made by Feng_Noti & With_Cout \nWebsite Version: Website 0.1");
+                    ball.classList.remove('right');
+                    message.style.display = 'none';
+                }, 500);
+            }
+        }
+    </script>
+    <script>
+        const text = document.getElementById('msg');
+        let checkmove = false;
+        document.getElementById('controlButton').addEventListener('click', function () {
+            if (checkmove) {
+                text.classList.remove('opa');
+                checkmove = false;
+            }
+            else {
+                text.classList.add('opa');
+                checkmove = true;
+            }
+        });
+    </script>
+    <script>
+        function more() {
+            alert("更多内容，请见 TPG 文档");
+            var a4 = confirm("你是否要查看该文档？");
+            if (a4 == true) {
+                window.open("https://with-cout.github.io/TPG_Doc/");
+                alert("已打开");
+            }
+            if (a4 == false) {
+                alert("如果需要帮助，请再次按下该按钮");
+            }
+        }
+    </script>
     <div id="area1">
         <p style="color: azure; font-size: 45px; text-align: center">主要区域</p>
         <p class="color1">你是否需要以下帮助？</p>
@@ -402,6 +495,12 @@
                 <button type="button" id="check3" onclick="whats()">文件</button>
             </p>
         </div>
+        <div class="side4">
+            <p>
+                更多内容
+                <button type="button" id="check7" onclick="more()">显示</button>
+            </p>
+        </div>
     </div>
     <!-- 无序列表 -->
     <div id="area2">
@@ -411,12 +510,11 @@
                 <a href="mailto:With_Cout@hotmail.com" target="_blank">发送邮件至 With_Cout@hotmail.com</a>
             </li>
         </ul>
-        <ul class="b">
-            <li style="color: peachpuff">
-                <p class="end">网站版本信息： Test 0.2 ( Stable )</p>
-            </li>
-        </ul>
-    </div>
+        <p class="button-contain">
+            <div class="ball"></div>
+            <button type="button" id="controlButton" class="check6" onclick="rollball()">网站信息</button>
+            <div id="msg"></div>
+        </div>
     <div id="area3">
         <p style="color: azure; font-size: 45px; text-align: center">调试区域</p>
         <button type="button" id="check4">关闭该网页</button>
@@ -436,7 +534,5 @@
             });
         </script>
     </div>
-    <p style="color: azure; font-size: 20px; text-align: center">! Made by Feng_Noti & With_Cout !</p>
-    <p style="color: azure; font-size: 20px; text-align: center">! Website Version !
 </body>
 </html>
