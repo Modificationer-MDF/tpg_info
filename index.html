@@ -436,20 +436,6 @@
         }
     </script>
     <script>
-        const text = document.getElementById('msg');
-        let checkmove = false;
-        document.getElementById('controlButton').addEventListener('click', function () {
-            if (checkmove) {
-                text.classList.remove('opa');
-                checkmove = false;
-            }
-            else {
-                text.classList.add('opa');
-                checkmove = true;
-            }
-        });
-    </script>
-    <script>
         function more() {
             alert("更多内容，请见 TPG 文档");
             var a4 = confirm("你是否要查看该文档？");
@@ -500,6 +486,20 @@
         <p class="button-contain">
             <div class="ball"></div>
             <button type="button" id="controlButton" class="check6" onclick="rollball()">网站信息</button>
+            <script>
+                const text = document.getElementById('msg');
+                let checkmove = false;
+                document.getElementById('controlButton').addEventListener('click', function () {
+                    if (checkmove) {
+                        text.classList.remove('opa');
+                        checkmove = false;
+                    }
+                    else {
+                        text.classList.add('opa');
+                        checkmove = true;
+                    }
+                });
+            </script>
             <div id="msg"></div>
         </div>
     <div id="area3">
