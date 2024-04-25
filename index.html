@@ -217,20 +217,6 @@
             font-weight: 225;
         }
 
-        #check5 {
-            background-color: #22370787;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 30px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 14px;
-            font-weight: 225;
-        }
-
         .check6 {
             background-color: #3e182093;
             border: none;
@@ -317,12 +303,13 @@
                 }
             }
         }
+        /* 以下是很长的 “文件” 函数 */
         function whats() {
             alert("请注意！ The Play Games 中所有的文件由各种编程语言组成 \n （包括但不限于： .bat, .vbs, .html ）");
             var d = confirm("你是否需要查看这些语言的中文文档？");
             if (d == true) {
                 var e = prompt("你需要查看哪一种语言？\n 1 - bat \n 2 - html \n 3 - f");
-                if (e == "bat" || e == "Bat" || e == "BAt" || e == "BAT" || e == "bAt" || e == "baT" || e == "BAT" || e == "bAT" || e == "BaT" || e == "1") {
+                if (e.toLowerCase() == "bat" || e == "1") {
                     var f = confirm("Windows Server: https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands \n 你是否要跳转到该网址？");
                     if (f == true) {
                         window.open("https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands");
@@ -335,7 +322,7 @@
                             alert("如果需要帮助，请再次按下该按钮");
                         }
                     }
-                } else if (e == "html" || e == "HTML" || e == "Html" || e == "HtmL" || e == "HtMl" || e == "HTml" || e == "HTMl" || e == "hTml" || e == "hTMl" || e == "hTML" || e == "htMl" || e == "htML" || e == "htmL" || e == "2") {
+                } else if (e.toLowerCase() == "html" || e == "2") {
                     var h = confirm("Mozilla: https://developer.mozilla.org/zh-CN/docs/Web/HTML \n 你是否要跳转到该网址？");
                     if (h == true) {
                         window.open("https://developer.mozilla.org/zh-CN/docs/Web/HTML")
@@ -421,6 +408,7 @@
         }
     </script>
     <script>
+        /* 滚球函数 */
         function rollball() {
             const ball = document.querySelector('.ball');
             const message = document.getElementById('msg');
@@ -428,7 +416,7 @@
                 ball.classList.add('right');
                 message.style.display = 'block';
                 setTimeout(function () {
-                    alert("Version: Website 0.1");
+                    alert("Version: Local 0.1");
                     ball.classList.remove('right');
                     message.style.display = 'none';
                 }, 500);
