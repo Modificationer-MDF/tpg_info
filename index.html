@@ -308,61 +308,73 @@
             alert("请注意！ The Play Games 中所有的文件由各种编程语言组成 \n （包括但不限于： .bat, .vbs, .html ）");
             var d = confirm("你是否需要查看这些语言的中文文档？");
             if (d == true) {
-                var e = prompt("你需要查看哪一种语言？\n 1 - bat \n 2 - html \n 3 - f");
-                if (e.toLowerCase() == "bat" || e == "1") {
-                    var f = confirm("Windows Server: https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands \n 你是否要跳转到该网址？");
-                    if (f == true) {
-                        window.open("https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands");
-                        alert("已在新窗口内打开该网址 \n / 如果浏览器阻止弹出窗口，请在设置中允许该网站弹出 /");
-                    } else if (f == false) {
-                        var g = confirm("你是否需要粘贴该网址文本至剪贴板？");
-                        if (g == true) {
-                            prompt("请复制以下文本", "https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands");
-                        } else if (g == false) {
-                            alert("如果需要帮助，请再次按下该按钮");
+                while (true) {
+                    var e = prompt("你需要查看哪一种语言？\n 1 - bat \n 2 - html \n 3 - f");
+                    e = e.toLowerCase();
+                    if (e === "bat" || e === "1") {
+                        var f = confirm("Windows Server: https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands \n 你是否要跳转到该网址？");
+                        if (f == true) {
+                            window.open("https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands");
+                            alert("已在新窗口内打开该网址 \n / 如果浏览器阻止弹出窗口，请在设置中允许该网站弹出 /");
+                            break;
+                        } else if (f == false) {
+                            var g = confirm("你是否需要粘贴该网址文本至剪贴板？");
+                            if (g == true) {
+                                prompt("请复制以下文本", "https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands");
+                                break;
+                            } else if (g == false) {
+                                alert("如果需要帮助，请再次按下该按钮");
+                                break;
+                            }
                         }
-                    }
-                } else if (e.toLowerCase() == "html" || e == "2") {
-                    var h = confirm("Mozilla: https://developer.mozilla.org/zh-CN/docs/Web/HTML \n 你是否要跳转到该网址？");
-                    if (h == true) {
-                        window.open("https://developer.mozilla.org/zh-CN/docs/Web/HTML")
-                        alert("已在新窗口内打开该网址 \n / 如果浏览器阻止弹出窗口，请在设置中允许该网站弹出 /")
-                    } else if (h == false) {
-                        var g = confirm("你是否需要粘贴该网址文本至剪贴板？");
-                        if (g == true) {
-                            prompt("请复制以下文本", "https://developer.mozilla.org/zh-CN/docs/Web/HTML");
-                        } else if (g == false) {
-                            alert("如果需要帮助，请再次按下该按钮");
+                    } else if (e === "html" || e === "2") {
+                        var h = confirm("Mozilla: https://developer.mozilla.org/zh-CN/docs/Web/HTML \n 你是否要跳转到该网址？");
+                        if (h == true) {
+                            window.open("https://developer.mozilla.org/zh-CN/docs/Web/HTML");
+                            alert("已在新窗口内打开该网址 \n / 如果浏览器阻止弹出窗口，请在设置中允许该网站弹出 /");
+                            break;
+                        } else if (h == false) {
+                            var g = confirm("你是否需要粘贴该网址文本至剪贴板？");
+                            if (g == true) {
+                                prompt("请复制以下文本", "https://developer.mozilla.org/zh-CN/docs/Web/HTML");
+                                break;
+                            } else if (g == false) {
+                                alert("如果需要帮助，请再次按下该按钮");
+                                break;
+                            }
                         }
-                    }
-                } else if (e == "f" || e == "F" || e == "3") {
-                    var i = confirm("跳转网址？");
-                    if (i == true) {
-                        alert("……");
-                        alert("…………");
-                        alert("……………… \n ……");
-                        alert("………… \n …………");
-                        alert("………… \n ………… \n ……");
-                        alert("………… \n ………… \n …………");
-                        alert("…………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………");
-                        var j = confirm("没有反应");
-                        if (j == true) {
-                            alert("没有反应！");
-                            alert("没有反应！\n 没有反应！\n 没有反应！\n");
-                            alert("没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！");
+                    } else if (e ==="f" || e === "3") {
+                        var i = confirm("跳转网址？");
+                        if (i == true) {
+                            alert("……");
+                            alert("…………");
+                            alert("……………… \n ……");
+                            alert("………… \n …………");
+                            alert("………… \n ………… \n ……");
+                            alert("………… \n ………… \n …………");
+                            alert("…………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………");
+                            var j = confirm("没有反应");
+                            if (j == true) {
+                                alert("没有反应！");
+                                alert("没有反应！\n 没有反应！\n 没有反应！\n");
+                                alert("没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！\n 没有反应！");
+                                location.href = randomurl;
+                                window.open("https://with-cout.github.io/You_got_lost/");
+                                break;
+                            } else if (j == false) {
+                                alert("XD");
+                                alert("[doge]");
+                                break;
+                            }
+                        } else if (i == false) {
+                            alert("! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n !");
                             location.href = randomurl;
                             window.open("https://with-cout.github.io/You_got_lost/");
-                        } else if (j == false) {
-                            alert("XD");
-                            alert("[doge]");
+                            break;
                         }
-                    } else if (i == false) {
-                        alert("! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n ! \n !");
-                        location.href = randomurl;
-                        window.open("https://with-cout.github.io/You_got_lost/");
+                    } else {
+                        alert("未知命令，请重试");
                     }
-                } else {
-                    alert("未知命令，请重试");
                 }
             }
             if (d == false) {
@@ -370,30 +382,30 @@
                 if (a1 == true) {
                     while (true) {
                         var a2 = prompt("以下是 The Play Games 文件列表，请输入你想知道的内容 \n 1 - 窗口叠叠乐 \n 2 - 隐形的文本文件 \n 3 - 一些无脑文件 \n 4 - 网页 ？？？ \n 5 - 新年特辑 \n 6 - F 语言字符转换器 \n 7 - 个人吐槽 \n 8 - 不想上学！！！");
-                        if (a2 == "1" || a2 == "窗口叠叠乐") {
+                        if (a2 === "1" || a2 === "窗口叠叠乐") {
                             alert("该文件是为了测试在无 Explorer 运行模式下最小化窗口能叠的个数");
                             alert("当然，你也可以“作死”在桌面上运行");
                             break;
-                        } else if (a2 == "2" || a2 == "隐形的文本文件") {
+                        } else if (a2 === "2" || a2 === "隐形的文本文件") {
                             alert("该想法来源于 SYSTEM-RAMOS-ZDY");
                             alert("这是我自制的批处理文件版本");
                             break;
-                        } else if (a2 == "3" || a2 == "一些无脑文件") {
+                        } else if (a2 === "3" || a2 === "一些无脑文件") {
                             alert("请自行尝试，难以言表");
                             break;
-                        } else if (a2 == "4" || a2 == "网页？？？" || a2 == "网页" || a2 == "网页？" || a2 == "网页？？" || a2 == "网页?" || a2 == "网页??" || a2 == "网页???" || a2 == "网页 ？？？") {
+                        } else if (a2 === "4" || a2 === "网页？？？" || a2 === "网页" || a2 === "网页？" || a2 === "网页？？" || a2 === "网页?" || a2 === "网页??" || a2 === "网页???" || a2 === "网页 ？？？") {
                             alert("这是 TPG 0.1 版本内置的彩蛋文件，以庆祝 TPG 的诞生 \n （实际上内容与此无关）");
                             break;
-                        } else if (a2 == "5" || a2 == "新年特辑") {
+                        } else if (a2 === "5" || a2 === "新年特辑") {
                             alert("这是 TPG 0.2 版本内置的彩蛋文件，以庆祝春节。你可以尝试运行 \n （虽然很简陋）");
                             break;
-                        } else if (a2 == "6" || a2 == "F 语言字符转换器" || a2 == "F语言字符转换器" || a2 == "f 语言字符转换器" || a2 == "f语言字符转换器") {
+                        } else if (a2 === "6" || a2 === "F 语言字符转换器" || a2 === "F语言字符转换器" || a2 === "f 语言字符转换器" || a2 === "f语言字符转换器") {
                             alert("这对以后的 TPG 很重要");
                             break;
-                        } else if (a2 == "7" || a2 == "个人吐槽") {
+                        } else if (a2 === "7" || a2 === "个人吐槽") {
                             alert("该文件用意在于：吐槽在私信上看到的言论 \n （现在没有私信了）");
                             break;
-                        } else if (a2 == "8" || a2 == "不想上学！！！" || a2 == "不想上学" || a2 == "不想上学！" || a2 == "不想上学！！" || a2 == "不想上学!" || a2 == "不想上学!!" || a2 == "不想上学!!!" || a2 == "不想上学 ！！！") {
+                        } else if (a2 === "8" || a2 === "不想上学！！！" || a2 === "不想上学" || a2 === "不想上学！" || a2 === "不想上学！！" || a2 === "不想上学!" || a2 === "不想上学!!" || a2 === "不想上学!!!" || a2 === "不想上学 ！！！") {
                             alert("基于现实故事编写，写的很乱，主要用于吐槽寒假时间太短 \n ！该文件可能会卡死电脑！");
                             break;
                         } else {
