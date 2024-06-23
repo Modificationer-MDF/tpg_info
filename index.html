@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Permissions-Policy" content="run-ad-auction=(self), join-ad-interest-group=(self)" />
     <title>关于</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
@@ -656,6 +657,17 @@
 </head>
 <body>
     <!-- 脚本区域 -->
+    <script>
+        function toweb() {
+            var a3 = confirm("跳转到网页版信息界面？（ 基于 github.io ）请确保你的网络已连接");
+            if (a3 == true) {
+                location.href = "https://with-cout.github.io/tpg_info/";
+            }
+            if (a3 == false) {
+                alert("如有需要，请再次点击该按钮");
+            }
+        }
+    </script>
     <div id="bg">
         <div class=""></div>
     </div>
@@ -892,23 +904,6 @@
             </script>
             <div id="mesg"></div>
     </div>
-    <div id="area3">
-        <p style="color: azure; font-size: 45px; text-align: center">调试区域</p>
-        <button type="button" id="check4">关闭该网页</button>
-        <script>
-            document.getElementById('check4').addEventListener('click', function () {
-                var close = confirm("是否关闭该网页？");
-                if (close == true) {
-                    window.close();
-                } else if (close == false) {
-                    alert("其实你也不想关闭，对吧？")
-                }
-            });
-            window.addEventListener('beforeunload', function (e) {
-                e.preventDefault();
-                e.returnValue = ' ';
-            });
-        </script>
         <script>
             var enablehelp = false; // 启用功能键提示的开关
             var gb = false;
@@ -954,7 +949,7 @@
                         whats();
                     }
                     else if (event.key === "Esc" || event.key === "Escape") {
-                        alert("当前已是网页版");
+                        alert("你已处于该网页");
                     }
                     else if (event.key === "F10") {
                         alert("你将选中 “设置与其他” 选项");
@@ -971,6 +966,5 @@
                 }
             });
         </script>
-    </div>
 </body>
 </html>
