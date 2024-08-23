@@ -8,21 +8,26 @@
     <style>
         /* 代码注释提要： 注释的是被弃用的代码 */
         /* 第 1 部分 */
+        @font-face {
+            font-family: "BM";
+            src: url("Basic Modification Light.ttf") format("truetype");
+        }
+
         body {
             background-color: #010409;
-            font-family: "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
+            font-family: "BM", "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
         }
 
         button {
             color: white;
-            font-weight: 225;
+            font-weight: 150;
             font-size: 30px;
-            font-family: "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
+            font-family: "BM", "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
         }
 
         a {
             color: white;
-            font-weight: 225;
+            font-weight: 150;
             font-size: 30px;
         }
 
@@ -48,7 +53,7 @@
 
         p {
             color: white;
-            font-weight: 225;
+            font-weight: 150;
             font-size: 30px;
         }
 
@@ -63,7 +68,7 @@
 
         div {
             color: white;
-            font-weight: 225;
+            font-weight: 150;
             font-size: 30px;
         }
 
@@ -118,7 +123,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 14px;
-            font-weight: 225;
+            font-weight: 150;
         }
 
         #check2 {
@@ -132,7 +137,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 14px;
-            font-weight: 225;
+            font-weight: 150;
         }
 
         #check3 {
@@ -146,7 +151,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 14px;
-            font-weight: 225;
+            font-weight: 150;
         }
 
         #area1 {
@@ -181,7 +186,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 14px;
-            font-weight: 225;
+            font-weight: 150;
         }
 
         #check5 {
@@ -195,7 +200,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 14px;
-            font-weight: 225;
+            font-weight: 150;
         }
 
         .check6 {
@@ -209,7 +214,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 14px;
-            font-weight: 225;
+            font-weight: 150;
         }
 
         #check7 {
@@ -223,7 +228,7 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 14px;
-            font-weight: 225;
+            font-weight: 150;
         }
 
         .button-contain {
@@ -238,7 +243,7 @@
             text-align: center;
             font-size: 20px;
             color: white;
-            font-family: "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
+            font-family: "BM", "MI Lan Pro VF", "Open Sans", "Microsoft YaHei UI", "Microsoft YaHei";
             font-weight: 200;
         }
 
@@ -868,6 +873,7 @@
     </script>
 </head>
 <body>
+    <!-- 脚本区域 -->
     <div id="bg">
         <div class=""></div>
     </div>
@@ -1111,9 +1117,47 @@
     </script>
     <script>
         async function func() {
-            await information("Test: Test 0.1, Test 0.2, Test 0.3, Test 0.4, Test 0.5, Test 0.6, Test 0.6 Regular");
-            await information("Stable: Stable 0.7");
-            await information("Stable 0.7 是最新的 The Play Games 版本。");
+            var ab = await keyin("输入 The Play Games 版本号。 （0.1 ~ 0.8）");
+            switch (ab) {
+                case "0.1":
+                    await information("Test 0.1 于 2024 年 2 月 6 日发布。这是 The Play Games 第一个版本。共有 4 个大文件、 1 个卸载文件和 1 个特殊文件（现已被移除）。");
+                    break;
+                case "0.2":
+                    await information("Test 0.2 于 2024 年 2 月 10 日发布。移除了上个版本的累赘文件并修复了大文件的逻辑问题。");
+                    break;
+                case "0.3":
+                    await information("Test 0.3 于 2024 年 2 月 11 日发布。增加了一些特殊文件并添加了反馈方式。");
+                    break;
+                case "0.4":
+                    await information("Test 0.4 于 2024 年 2 月 13 日发布。增加了一些特殊文件并编写了反馈网页。");
+                    break;
+                case "0.5":
+                    await information("Test 0.5 于 2024 年 2 月 14 日发布。整合了特殊文件并增加 1 个大文件。");
+                    break;
+                case "0.6":
+                    await information("Test 0.6 于 2024 年 2 月 20 日发布。增加了 2 个大文件和 1 个小文件，并修复了一些文件中的日期错误。");
+                    break;
+                case "0.6 Regular":
+                    await information("Test 0.6 Regular 于 2024 年 2 月 22 日发布。翻新特殊文件并微调了 1 个大文件。");
+                    break;
+                case "0.6 regular":
+                    var ans_ = await choose("你是指 “0.6 Regular”？");
+                    if (ans_) {
+                        await information("Test 0.6 Regular 于 2024 年 2 月 22 日发布。翻新特殊文件并微调了 1 个大文件。");
+                    } else {
+                        await information("输入有误。");
+                    }
+                    break;
+                case "0.7":
+                    await information("Test 0.7 于 2024 年 8 月 22 日发布。重写了整个 The Play Games。");
+                    break;
+                case "0.8":
+                    await information("敬请期待。");
+                    break;
+                default:
+                    await information("输入有误。");
+                    break;
+            }
         }
     </script>
     <div id="area1">
@@ -1121,8 +1165,8 @@
         <p class="color1">你是否需要以下帮助？</p>
         <div class="side1">
             <p>
-                The Play Games 版本列表
-                <button type="button" id="check1" onclick="func()">是</button>
+                The Play Games 版本说明
+                <button type="button" id="check1" onclick="func()">查看</button>
             </p>
         </div>
         <div class="side2">
@@ -1195,7 +1239,7 @@
                             whats();
                             break;
                         case "Escape":
-                            alert("你已位于网页版本");
+                            alert("你已处于该网页。");
                             break;
                         case "F10":
                             alert("你将选中 “设置与其他” 选项。");
